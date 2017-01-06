@@ -1,3 +1,3 @@
-## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+## 2.0.0 - First Release
+* Copied original colors from Sublime theme.
+* Applied new colors and details to Atom.
