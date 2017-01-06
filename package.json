@@ -1,7 +1,7 @@
 {
   "name": "eggplant-parm-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A delicious, aubergine color theme for Atom by Mims H. Wright.",
   "keywords": [
     "ui",
