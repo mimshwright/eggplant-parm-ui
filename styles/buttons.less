@@ -8,6 +8,8 @@
 .btn {
   color: lighten(@text-color, 6%);
   background-color: @button-background-color;
+  border-radius: max(100px, @component-border-radius / 2);
+
   &:hover,
   &:focus {
     color: @text-color-highlight;
@@ -58,6 +60,16 @@
 
 // Button Group -----------------------
 
-.btn-group > .btn {
-  border-color: hsla(0,0%,0%,.2);;
+.btn-group {
+  .btn:first-child {
+    border-bottom-left-radius: max(100px, @component-border-radius / 2);
+    border-top-left-radius: max(100px, @component-border-radius / 2);
+  }
+  .btn:last-child, .btn.selected:last-child {
+    border-bottom-right-radius: max(100px, @component-border-radius / 2);
+    border-top-right-radius: max(100px, @component-border-radius / 2);
+  }
+  & > .btn {
+    border-color: hsla(0,0%,0%,.2);
+  }
 }

@@ -1,3 +1,26 @@
+@color-basil: #A6E22E;
+@color-crockery: #F8F8F0;
+@color-eggplant: #371B52;
+@color-eggplant-pickle: #00263F;
+@color-hard-boiled-egg-yolk: #E6DB74;
+@color-lavender: #AE81FF;
+@color-moldy-parmesan: #E0EDDD;
+@color-mozzerella: #FAFFDC;
+@color-mustard: #FFB900;
+@color-old-eggplant: #75715E;
+@color-olive-oil: #F7FF00;
+@color-parmesan: #EEE8D5;
+@color-plum: #4D0049;
+@color-prociutto: #FDB9AC;
+@color-prune: #100010;
+@color-scrambled-eggs: #FFE792;
+@color-semolina: #A57706;
+@color-sugo: #FF445A;
+@color-tangerine: #FF6728;
+@color-tomato-sauce: #E83209;
+@color-wasabi: #C0E0B8;
+@color-wintergreen: #11C5BF;
+
 
 // UI Variables
 // -------------------
@@ -12,15 +35,16 @@
 
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color:           @color-wasabi;
+@text-color-subtle:    desaturate(darken(@text-color, 20%), 10%);
+@text-color-highlight: @color-scrambled-eggs;
+@text-color-selected:  @color-parmesan;
+@text-color-tooltip:   @color-eggplant-pickle;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    @color-wintergreen;
+@text-color-success: @color-basil;
+@text-color-warning: @color-mustard;
+@text-color-error:   @color-tomato-sauce;
 
 // Background colors
 @background-color-info:    hsl(208, 100%, 50%);
@@ -29,11 +53,12 @@
 @background-color-error:   hsl(0,    70%, 50%);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+@background-color-selected:  @color-plum; //lighten(@base-background-color, 10%);
+@background-color-tooltip:   @color-wintergreen;
+@app-background-color:       @color-eggplant-pickle;
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
+@base-background-color: @color-eggplant;
 @base-border-color:     darken(@base-background-color, 8%);
 
 // Component colors
@@ -60,7 +85,7 @@
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:    @base-background-color;
+@tab-bar-background-color:    @color-eggplant-pickle;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: lighten(@tab-bar-background-color, 10%);
@@ -70,11 +95,11 @@
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: @color-wintergreen;
+@ui-site-color-2: @color-olive-oil;
+@ui-site-color-3: @color-tangerine;
+@ui-site-color-4: @color-sugo;
+@ui-site-color-5: @color-mozzerella;
 
 // Sizes
 @font-size: 12px;
@@ -91,4 +116,4 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'Montserrat', '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

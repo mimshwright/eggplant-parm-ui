@@ -6,18 +6,23 @@
 
 
 .tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @background-color-tooltip;
+  }
   .tooltip-inner {
     line-height: 1;
     padding: .75em;
     white-space: nowrap;
     max-width: none;
+    border-radius: max(100px, @component-border-radius / 2);
+    background: @background-color-tooltip;
+    color: @text-color-tooltip;
   }
 
   .keystroke {
-    padding: .15em .4em;
-    margin: 0 -.3em 0 .25em;
-    border-radius: max(2px, @component-border-radius / 2);
-    color: @text-color-selected;
-    background: @background-color-selected;
+    padding: .15em .6em;
+    margin: 0 -.25em 0 .25em;
+    border-radius: max(100px, @component-border-radius / 2);
+    background: lighten(@background-color-tooltip, 30%);
   }
 }
